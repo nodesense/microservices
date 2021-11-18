@@ -13,7 +13,8 @@ app.use(express.json())
 app.use("/products", productRouter)
 
 app.get("/hello", (req, res)=> {
-    res.json({result: true})
+    console.log("**hello called")
+    res.json({result: false})
 })
 
 app.get("/error", (req, res)=> {
