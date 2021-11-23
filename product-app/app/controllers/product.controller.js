@@ -37,6 +37,7 @@ module.exports = {
     },
 
     searchProducts: async (req, res) => {
-
+        const results = await productService.searchProducts(req.query)
+        res.json(results)
     },
 }
