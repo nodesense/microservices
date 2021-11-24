@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "mocha  test\\product.controller.spec.js"
+    "test": "mocha NODE_ENV=test  test\\product-api.spec.js"
   },
   "keywords": [],
   "author": "",

@@ -1,8 +1,9 @@
-require("dotenv").config('.env.test') 
+require("dotenv").config({path: '.env.test'}) 
 const sinon = require('sinon')
 const chai = require('chai')
 const assert = chai.assert
 const expect = chai.expect
+chai.should()
 
 const chaiHttp = require('chai-http');
 const app = require('../app');
@@ -11,7 +12,9 @@ const Product = require("../app/models/Product")
 
 chai.use(chaiHttp);
 
-chai.should()
+console.log('mongo url ', process.env.MONGO_URI)
+
+
 
 //integration test
 // a database
