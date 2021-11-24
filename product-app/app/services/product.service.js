@@ -4,7 +4,8 @@ const Product = require("../models/Product")
 module.exports = {
     
     getProduct: async (id) => {
-            return {id, name: 'new product'}
+      console.log("Service called", id)
+            return await Product.findById(id)
     },
     
     createProduct: async (productJson) => {

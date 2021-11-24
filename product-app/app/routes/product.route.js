@@ -9,6 +9,10 @@ const { getProducts,
 
 const productRouter = express.Router()
 
+
+productRouter.get('/search', searchProducts)
+
+
 // GET  /products
 // POST  /products
 
@@ -26,7 +30,5 @@ productRouter.route('/:id')
          .delete(deleteProduct)
 
 // GET /products/search?q=iphone
-
-productRouter.get('/search', searchProducts)
 
 module.exports = productRouter

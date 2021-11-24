@@ -13,10 +13,14 @@ module.exports = {
               })
           }
 
-         return res.json(product)
+         return res.json({...product})
         }
         catch (err) {
             logger.info(err.message)
+            return res.status(500).json({
+                errorCode: 500,
+                message: 'product some error'
+            })
         }
     },
 
@@ -25,6 +29,7 @@ module.exports = {
     },
 
     createProduct: async (req, res) => {
+        console.log("create product call")
         const product = await productService.createProduct(req.body)
         res.json(product)
     },

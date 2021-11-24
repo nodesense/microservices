@@ -10,10 +10,10 @@ function add(a, b) {
 }
 
 
-describe("async test suite", () => {
+xdescribe("async test suite", () => {
     // write test cases
     // for async tesiting, we can a callback to set completion of test case
-   it("should add two positive numbers async", (done) => {
+   xit("should add two positive numbers async", (done) => {
        add(10, 20).then((result) => {
         console.log("callback")    
         assert.equal(result, 30)
